@@ -38,7 +38,7 @@ Please upload your source code to GitHub or other similar service
 
 ```shell
 # git clone
-git clone git@github.com:danielhuang-030/api_test.git
+git clone https://github.com/danielhuang-030/api_test.git
 
 # composer install
 composer install
@@ -51,9 +51,11 @@ vi .env
 chmod 777 -R storage
 chmod 777 -R bootstrap/cache
 
-# migrate, and insert db seed
+# generate key, migrate, and insert db seed
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
+
 ```
 
 ### API info
